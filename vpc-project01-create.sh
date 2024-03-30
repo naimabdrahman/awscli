@@ -9,6 +9,9 @@ private_subnet_cidr_block="10.0.2.0/24"
 tag_to_delete="todelete"
 resource_file="temp-resource.txt"
 
+# Clear tempfile
+rm -rf temp-resource.txt
+
 # Create VPC
 vpc_id=$(aws ec2 create-vpc --cidr-block $vpc_cidr_block --query 'Vpc.VpcId' --output text --tag-specifications "ResourceType=vpc,Tags=[{Key=Name,Value=${project_prefix}-vpc},{Key=${tag_to_delete},Value=true}]")
 echo "VPC created successfully with ID: $vpc_id" >> $resource_file
