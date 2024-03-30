@@ -1,4 +1,4 @@
-[200~[201~#!/bin/bash
+#!/bin/bash
 
 # Set variables
 project_prefix="project01"
