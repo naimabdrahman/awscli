@@ -64,3 +64,4 @@ aws ec2 associate-route-table --subnet-id $private_subnet_id --route-table-id $p
 aws ec2 create-vpc-endpoint --vpc-id $vpc_id --service-name com.amazonaws.ap-southeast-1.s3 --route-table-ids $route_table_id --tag-specifications "ResourceType=vpc-endpoint,Tags=[{Key=Name,Value=${project_prefix}-s3-endpoint},{Key=${tag_to_delete},Value=true}]"
 
 echo "Project infrastructure created successfully."
+
