@@ -15,3 +15,4 @@ else
 fi
 
 echo "NAT gateways deletion completed."
+
